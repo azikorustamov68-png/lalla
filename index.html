@@ -1,43 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f7">
+  <title>Apple — Yangiliklar va mahsulotlar</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <div class="asosiy">
-
-        <div class="chap">
-            <h1>Flexbox </h1>
-        </div>
-
-        <div class="ong">
-            <div class="tepa"></div>
-            <div class="orta">
-                <div class="box"></div>
-                <div class="box"></div>
-            </div>
-            <div class="tepa"></div>
-
-        </div>
+  <div class="top-note">Yangi imkoniyatlar bilan tanishing. <a href="#discover">Batafsil →</a></div>
+  <header class="header">
+    <nav class="nav wrap" aria-label="Asosiy menyu">
+      <a class="apple-mark" href="#top" aria-label="Bosh sahifa">●</a>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Menyuni ochish" aria-expanded="false"><i></i><i></i></button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#store">Do‘kon</a><a href="#mac">Mac</a><a href="#ipad">iPad</a>
+        <a href="#iphone">iPhone</a><a href="#watch">Watch</a><a href="#airpods">AirPods</a>
+        <a href="#entertainment">Ko‘ngilochar</a><a href="#support">Yordam</a>
+      </div>
+      <div class="nav-tools">
+        <button id="searchOpen" aria-label="Qidirish" class="nav-icon">⌕</button>
+        <button id="cartOpen" aria-label="Savatcha" class="nav-icon cart-icon">▢<b id="cartCount">0</b></button>
+      </div>
+    </nav>
+    <div class="search-box" id="searchBox">
+      <div class="wrap search-inner"><span>⌕</span><input id="searchInput" placeholder="Nimani qidiryapsiz?" type="search"><button id="searchClose" aria-label="Yopish">✕</button></div>
+      <div class="wrap search-matches" id="searchMatches"></div>
     </div>
+  </header>
 
+  <main id="top">
+    <section class="hero hero-iphone" id="iphone">
+      <div class="hero-content">
+        <p class="kicker">YANGI AVLOD</p><h1>iPhone 17 Pro</h1>
+        <p class="lead">Kuch. Tezlik. Cheksiz ijod.</p>
+        <div class="actions"><a class="pill primary" href="#products">Batafsil</a><button class="pill ghost add-cart" data-product="iPhone 17 Pro">Savatchaga qo‘shish</button></div>
+      </div>
+      <img class="hero-visual" src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=2000&q=90" alt="Premium smartfon tasviri">
+    </section>
 
+    <section class="hero hero-mac" id="mac">
+      <div class="hero-content">
+        <p class="kicker">YENGIL. KUCHLI. SODDA.</p><h2>MacBook Air</h2>
+        <p class="lead">Katta g‘oyalar uchun katta imkoniyat.</p>
+        <div class="actions"><a class="pill primary" href="#products">Batafsil</a><button class="pill outline add-cart" data-product="MacBook Air">Savatchaga qo‘shish</button></div>
+      </div>
+      <img class="hero-visual" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1900&q=90" alt="Noutbuk tasviri">
+    </section>
 
+    <section class="intro wrap" id="discover">
+      <p class="kicker">APPLE DUNYOSI</p>
+      <h2>Yaxshi g‘oyalar<br><span>yanada yaxshiroq ishlaydi.</span></h2>
+      <p>Har bir kuningiz uchun ilhom, quvvat va qulaylik.</p>
+    </section>
 
+    <section class="products" id="store">
+      <div class="wrap section-top">
+        <div><p class="kicker">TANLANGAN MAHSULOTLAR</p><h2>O‘zingizga mosini toping.</h2></div>
+        <div class="slider-arrows"><button id="slidePrev" aria-label="Oldingi">←</button><button id="slideNext" aria-label="Keyingi">→</button></div>
+      </div>
+      <div class="slider-window" id="sliderWindow">
+        <div class="slider-track" id="sliderTrack">
+          <article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=900&q=85" alt="iPhone"></div><div class="product-copy"><p class="kicker">IPHONE</p><h3>iPhone 17 Pro</h3><p>Pro darajadagi quvvat va kamera.</p><strong>18 999 000 so‘mdan</strong><button class="link-button add-cart" data-product="iPhone 17 Pro">Savatchaga qo‘shish +</button></div></article>
+          <article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=85" alt="MacBook"></div><div class="product-copy"><p class="kicker">MAC</p><h3>MacBook Air</h3><p>Yengil korpus, katta imkoniyat.</p><strong>14 499 000 so‘mdan</strong><button class="link-button add-cart" data-product="MacBook Air">Savatchaga qo‘shish +</button></div></article>
+          <article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=900&q=85" alt="iPad"></div><div class="product-copy"><p class="kicker">IPAD</p><h3>iPad Pro</h3><p>Ijod uchun keng va yorqin ekran.</p><strong>12 999 000 so‘mdan</strong><button class="link-button add-cart" data-product="iPad Pro">Savatchaga qo‘shish +</button></div></article>
+          <article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=900&q=85" alt="Aqlli soat"></div><div class="product-copy"><p class="kicker">WATCH</p><h3>Apple Watch</h3><p>Faolligingizni kuzatib boring.</p><strong>5 499 000 so‘mdan</strong><button class="link-button add-cart" data-product="Apple Watch">Savatchaga qo‘shish +</button></div></article>
+          <article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=900&q=85" alt="AirPods"></div><div class="product-copy"><p class="kicker">AIRPODS</p><h3>AirPods Pro</h3><p>Ovoz olamiga sho‘ng‘ing.</p><strong>3 299 000 so‘mdan</strong><button class="link-button add-cart" data-product="AirPods Pro">Savatchaga qo‘shish +</button></div></article>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
 
+    <section class="tiles wrap" id="ipad">
+      <article class="tile tile-black">
+        <div><p class="kicker">IPAD PRO</p><h2>G‘oyangizga<br>kenglik bering.</h2><p>Yangi ish uslubingiz shu yerdan boshlanadi.</p><a href="#products">Batafsil →</a></div>
+        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1100&q=85" alt="Planshet">
+      </article>
+      <article class="tile tile-pink" id="watch">
+        <div><p class="kicker">APPLE WATCH</p><h2>Har kuningiz<br>faolroq bo‘lsin.</h2><p>Siz bilan birga harakatda.</p><a href="#products">Batafsil →</a></div>
+        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1100&q=85" alt="Aqlli soat">
+      </article>
+      <article class="tile tile-sand" id="airpods">
+        <div><p class="kicker">AIRPODS PRO</p><h2>Ovozingizni<br>his qiling.</h2><p>Har bir ohangda yangi taassurot.</p><a href="#products">Batafsil →</a></div>
+        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=1100&q=85" alt="Simsiz quloqchin">
+      </article>
+      <article class="tile tile-blue">
+        <div><p class="kicker">MACBOOK</p><h2>Yangi marralar<br>sari.</h2><p>Yengillik va unumdorlik birlashdi.</p><a href="#mac">Batafsil →</a></div>
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1100&q=85" alt="Noutbuk">
+      </article>
+    </section>
 
+    <section class="film" id="entertainment">
+      <div class="wrap film-heading"><p class="kicker">MAHSULOTLAR OLAMI</p><h2>Har bir lahzada ilhom.</h2><p>Namoyish videosini tomosha qiling.</p></div>
+      <div class="film-player" id="filmPlayer">
+        <video id="demoVideo" poster="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1900&q=90" playsinline preload="metadata">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        </video>
+        <div class="film-cover" id="filmCover"><button id="bigPlay" aria-label="Videoni boshlash">▶</button><span>Videoni tomosha qilish</span></div>
+        <div class="video-bar">
+          <button id="playPause" aria-label="Ijro yoki pauza">▶</button>
+          <input id="seek" type="range" min="0" max="100" value="0" aria-label="Video vaqti">
+          <span id="clock">0:00</span>
+          <button id="mute" aria-label="Ovoz">♫</button>
+          <button id="fullScreen" aria-label="To‘liq ekran">⛶</button>
+        </div>
+      </div>
+      <p class="film-caption">Namoyish uchun namunaviy video. O‘z videongizni HTML ichidagi video manziliga almashtirishingiz mumkin.</p>
+    </section>
 
+    <section class="final-call wrap">
+      <p class="kicker">HAMMASI BIR-BIRIGA MOS</p><h2>Birgalikda yanada<br>ajoyib.</h2><p>Texnologiya kundalik hayotingizga moslashsin.</p><a class="pill primary" href="#top">Yuqoriga qaytish ↑</a>
+    </section>
+  </main>
 
+  <footer class="footer" id="support">
+    <div class="wrap"><p>Bu sahifa dasturlash amaliyoti uchun yaratilgan mustaqil o‘quv loyihasidir. Apple kompaniyasining rasmiy sayti emas.</p><div class="footer-links"><a href="#store">Mahsulotlar</a><a href="#entertainment">Videolar</a><a href="#top">Bosh sahifa</a></div><small>© 2026 — O‘quv loyihasi. Apple va mahsulot nomlari tegishli egalariga tegishli.</small></div>
+  </footer>
 
-
-
-
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-title"><h2>Savatcha</h2><button id="cartClose" aria-label="Yopish">✕</button></div>
+    <p id="cartEmpty">Savatchangiz hozircha bo‘sh.</p><ul id="cartItems"></ul>
+    <div class="cart-bottom"><strong>Jami: <span id="cartTotal">0 so‘m</span></strong><button class="pill primary" id="checkout">Buyurtmani davom ettirish</button></div>
+  </aside>
+  <div class="scrim" id="scrim"></div><div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
 </body>
-
 </html>
